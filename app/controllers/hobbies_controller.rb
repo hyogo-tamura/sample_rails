@@ -1,13 +1,10 @@
 class HobbiesController < ApplicationController
-
   def index
     @hobbies = Hobby.all
     @hobby = Hobby.new
   end
-  
-  def show
-    
-  end
+
+  def show; end
 
   def create
     if params[:user_id]
