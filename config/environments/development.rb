@@ -58,6 +58,14 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
-
+  config.consider_all_requests_local = true
+  config.web_console.whitelisted_ips = %w( 0.0.0.0/0 ::/0 )
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+end
+
+if defined? BetterErrors
+  # Private subnets defined by RFC1918 as stated in https://docs.docker.com/v1.5/articles/networking/
+  BetterErrors::Middleware.allow_ip! '10.0.0.0/8'
+  BetterErrors::Middleware.allow_ip! '172.16.0.0/12'
+  BetterErrors::Middleware.allow_ip! '192.168.0.0/16'
 end
