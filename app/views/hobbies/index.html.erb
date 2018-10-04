@@ -5,3 +5,11 @@
     <li><%= hobby.title %></li>
 <% end %>
 </ul>
+
+<h2>趣味追加</h2>
+<%= form_for @hobby do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+
+    <%= f.submit "作成", class: "btn btn-primary" %>
+<% end %>

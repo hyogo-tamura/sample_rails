@@ -12,9 +12,4 @@ class UsersController < ApplicationController
 
   end
 
-  def update
-    hobby = Hobby.find(params[:hobby])
-    current_user.hobbies.append(hobby)
-    redirect_to user_url, id: current_user.id
-  end
 end

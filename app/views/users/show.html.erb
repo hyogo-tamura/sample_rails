@@ -8,5 +8,5 @@
 <hr>
 <h2>趣味を追加する</h2>
 <% @recomend_hobbies.each do |hobby| %>
-  <%= button_to hobby.title, user_path(current_user), method: :patch, params: {hobby: hobby} %>
+  <%= button_to hobby.title, user_hobbies_path(current_user), method: :post, params: {hobby: hobby} %>
 <% end %>
