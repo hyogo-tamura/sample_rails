@@ -1,0 +1,12 @@
+<p><%= current_user.username %></p>
+<h2>趣味</h2>
+<ul>
+  <% current_user.hobbies.each do |hobby| %>
+    <li><%= hobby.title %></li>
+  <% end %>
+</ul>
+<hr>
+<h2>趣味を追加する</h2>
+<% @recomend_hobbies.each do |hobby| %>
+  <%= button_to hobby.title, user_path(current_user), method: :patch, params: {hobby: hobby} %>
+<% end %>
