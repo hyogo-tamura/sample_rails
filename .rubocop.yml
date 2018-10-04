@@ -1,0 +1,28 @@
+AsciiComments:
+  Enabled: false
+
+Documentation:
+  Enabled: false
+
+LineLength:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+
+Metrics/AbcSize:
+  Enabled: true
+  Max: 20
+
+AllCops:
+  TargetRubyVersion: 2.5.1
+  Exclude:
+    - Gemfile
+    - vendor/**/*
+    - db/**/*
+    - config/**/*
+    - bin/**/*
