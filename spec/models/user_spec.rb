@@ -26,5 +26,4 @@ RSpec.describe User, type: :model do
     user = User.new(email: Faker::Internet.email, password: pass, password_confirmation: pass_c)
     expect(user).to_not be_valid
   end
-
 end

@@ -7,7 +7,7 @@ RSpec.describe Hobby, type: :model do
   end
 
   it 'is invalid without title' do
-    hobby = Hobby.new()
+    hobby = Hobby.new
     expect(hobby).to_not be_valid
   end
 
@@ -22,10 +22,10 @@ RSpec.describe Hobby, type: :model do
   end
 
   describe 'when the title is already taken' do
-    before {
+    before do
       hobby = Hobby.new(title: 'test')
       hobby.save!
-    }
+    end
     it 'is not valid' do
       hobby2 = Hobby.new(title: 'test')
       expect(hobby2).to_not be_valid
