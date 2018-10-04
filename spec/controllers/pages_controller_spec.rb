@@ -7,7 +7,6 @@ RSpec.describe PagesController, type: :controller do
     render_views
     before do
       login_user user
-      # controller_macros.rb内のlogin_userメソッドを呼び出し
       get :index
     end
     it 'returns http success' do
