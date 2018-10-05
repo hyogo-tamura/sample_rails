@@ -14,8 +14,8 @@ RUN apt-get update -qq && \
 # install nodejs
 RUN curl -s -L git.io/nodebrew | perl - setup
 ENV PATH /root/.nodebrew/current/bin:$PATH
-RUN nodebrew install-binary v8.7.0
-RUN nodebrew use v8.7.0
+RUN nodebrew install-binary v8.9.0
+RUN nodebrew use v8.9.0
 
 # install yarn
 # https://yarnpkg.com/en/docs/install#linux-tab
