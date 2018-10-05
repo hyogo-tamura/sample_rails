@@ -11,7 +11,7 @@ class HobbiesController < ApplicationController
       user = User.find(params[:user_id])
       user.hobbies.append(Hobby.find(params[:hobby]))
       user.save!
-      redirect_to user_url, id: user.id
+      redirect_to user_url(id: params[:user_id])
     else
       hobby = Hobby.new(post_params)
       hobby.save!
