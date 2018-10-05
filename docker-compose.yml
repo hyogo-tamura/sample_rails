@@ -20,6 +20,16 @@ services:
       - db
     tty: true
     stdin_open: true
+  
+  webpack:
+    <<: *app_base
+    command: "bin/webpack-dev-server"
+    ports:
+      - "3035:3035"
+    depends_on:
+      - web
+    tty: false
+    stdin_open: false
     
 volumes:
   bundle_install:

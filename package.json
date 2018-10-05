@@ -1,5 +1,14 @@
 {
-  "name": "actindi",
+  "name": "actindi_task",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@rails/webpacker": "3.5",
+    "browserify": "^16.2.3",
+    "webpack": "^4.20.2",
+    "webpack-dev-server": "2.11.2"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/hyogo-tamura/sample_rails.git",
+  "license": "MIT"
 }
