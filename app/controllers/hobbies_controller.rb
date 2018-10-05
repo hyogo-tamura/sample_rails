@@ -4,7 +4,9 @@ class HobbiesController < ApplicationController
     @hobby = Hobby.new
   end
 
-  def show; end
+  def show
+    @hobby = Hobby.find(params[:id])
+  end
 
   def create
     if params[:user_id]
